@@ -1,0 +1,6 @@
+<div>
+  <label>Enter Text:</label>
+  <input [(ngModel)]="textValue" placeholder="Type something" />
+  <button (click)="displayText()">Display Text</button>
+</div>
+<h1 *ngIf="displayTextFlag">{{ textValue }}</h1>

@@ -1,0 +1,23 @@
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+ <label>
+    Name:
+    <input type="text" name="name" ngModel required>
+ </label>
+<br>
+ <label>
+    Email:
+    <input type="email" name="email" ngModel required>
+ </label>
+<br>
+ <label>
+    Phone Number:
+    <input type="tel" name="phoneNumber" ngModel pattern="^\d{10}$" required>
+ </label>
+<br>
+ <label>
+    Password:
+    <input type="password" name="password" ngModel required minlength="8">
+ </label>
+<br>
+ <button type="submit" [disabled]="!userForm.form.valid">Submit</button>
+</form>

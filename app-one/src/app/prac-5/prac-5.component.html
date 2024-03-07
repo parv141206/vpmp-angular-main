@@ -1,0 +1,29 @@
+<!-- <div>
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Percentage</th>
+      <th>Grades</th>
+      <th>Remarks</th>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let student of students; let i = index"
+        [ngClass]="i % 2 === 0 ? 'even' : 'odd'"
+      >
+        <td>{{ student.name }}</td>
+        <td>{{ student.percentage }}</td>
+        <td>{{ calculateGrade(student.percentage) }}</td>
+        <td [ngSwitch]="calculateGrade(student.percentage)">
+          <div *ngSwitchCase="'A'">Excellent</div>
+          <div *ngSwitchCase="'B'">Very Good</div>
+          <div *ngSwitchCase="'C'">Good</div>
+          <div *ngSwitchCase="'D'">Average</div>
+          <div *ngSwitchDefault>Fail</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+
+<app-q-1></app-q-1>

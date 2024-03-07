@@ -1,0 +1,44 @@
+<form #facultyForm="ngForm" (ngSubmit)="onSubmit(facultyForm)">
+ <label>
+    Code:
+    <input type="text" name="code" ngModel required>
+ </label>
+<br>
+ <label>
+    Name:
+    <input type="text" name="name" ngModel required>
+ </label>
+<br>
+ <label>
+    Email:
+    <input type="email" name="email" ngModel required>
+ </label>
+<br>
+ <label>
+    Type:
+    <select name="type" ngModel required>
+      <option value="">Select Type</option>
+      <option value="fullTime">Full Time</option>
+      <option value="partTime">Part Time</option>
+    </select>
+ </label>
+<br>
+ <label>
+    Status:
+    <select name="status" ngModel required>
+      <option value="">Select Status</option>
+      <option value="active">Active</option>
+      <option value="inactive">Inactive</option>
+    </select>
+ </label>
+<br>
+ <label>
+    Subjects Teaching:
+    <div *ngFor="let subject of subjects; let i=index">
+      <input [(ngModel)]="subjects[i]" name="subject{{i}}" required>
+    </div>
+    <button (click)="addSubject()">Add Subject</button>
+ </label>
+<br>
+ <button type="submit" [disabled]="!facultyForm.form.valid">Submit</button>
+</form>

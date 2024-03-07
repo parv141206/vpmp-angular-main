@@ -1,0 +1,26 @@
+<form #studentForm="ngForm" (ngSubmit)="calculateGrade(studentForm)">
+ <label>
+    Angular:
+    <input type="number" name="subject1" ngModel required>
+ </label>
+ <br>
+ <label>
+    JAVA:
+    <input type="number" name="subject2" ngModel required>
+ </label>
+<br>
+ <label>
+    Software Engineering:
+    <input type="number" name="subject3" ngModel required>
+ </label>
+<br>
+ <button type="submit" [disabled]="!studentForm.form.valid">Calculate Grade</button>
+</form>
+
+<div *ngIf="grade">
+ Your grade is: {{ grade }}
+</div>
+
+<div *ngIf="!grade">
+ Sorry, you did not pass.
+</div>

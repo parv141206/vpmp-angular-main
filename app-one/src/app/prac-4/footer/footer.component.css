@@ -1,0 +1,8 @@
+.footer-style {
+  text-align: center;
+  background-color: black;
+  /* border-radius: 10px; */
+  color: white;
+  padding: 30px;
+  font: bold 20px/30px Georgia, serif;
+}

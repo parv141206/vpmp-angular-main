@@ -1,0 +1,8 @@
+<ul>
+ <li *ngFor="let student of students">
+    <h2>{{ student.name }}</h2>
+    <p>ID: {{ student.id }}</p>
+    <p>Address: {{ student.address | slice:0:20 }}...</p>
+    <p>Semester: {{ student.semester }}</p>
+ </li>
+</ul>

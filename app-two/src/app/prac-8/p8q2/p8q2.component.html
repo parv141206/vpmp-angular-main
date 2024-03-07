@@ -1,0 +1,18 @@
+<form #feedbackForm="ngForm" (ngSubmit)="submitFeedback(feedbackForm)">
+ <label>
+    Teacher's Name:
+    <input type="text" name="teacherName" ngModel required>
+ </label>
+<br>
+ <label>
+    Application Name:
+    <input type="text" name="applicationName" ngModel required>
+ </label>
+<br>
+ <label>
+    Feedback:
+    <textarea name="feedback" ngModel required></textarea>
+ </label>
+<br>
+ <button type="submit" [disabled]="!feedbackForm.form.valid">Submit Feedback</button>
+</form>

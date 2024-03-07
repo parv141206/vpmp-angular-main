@@ -1,0 +1,27 @@
+<form #studentForm="ngForm" (ngSubmit)="register(studentForm)">
+ <label>
+    Name:
+    <input type="text" name="name" ngModel required>
+    <div *ngIf="!studentForm.controls['name'].valid && studentForm.controls['name'].touched">
+      Name is required.
+    </div>
+ </label>
+
+ <label>
+    Email:
+    <input type="email" name="email" ngModel required>
+    <div *ngIf="!studentForm.controls['email'].valid && studentForm.controls['email'].touched">
+      Please enter a valid email.
+    </div>
+ </label>
+
+ <label>
+    Password:
+    <input type="password" name="password" ngModel required minlength="8">
+    <div *ngIf="!studentForm.controls['password'].valid && studentForm.controls['password'].touched">
+      Password is required and must be at least 8 characters long.
+    </div>
+ </label>
+
+ <button type="submit" [disabled]="!studentForm.form.valid">Register</button>
+</form>

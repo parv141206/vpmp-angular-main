@@ -1,0 +1,7 @@
+<div *ngFor="let product of displayedProducts">
+ <h2>{{ product.name }}</h2>
+ <p>Price: {{ product.price }}</p>
+</div>
+
+<button (click)="prevPage()" [disabled]="currentPage === 1">Previous Page</button>
+<button (click)="nextPage()" [disabled]="currentPage * itemsPerPage >= products.length">Next Page</button>

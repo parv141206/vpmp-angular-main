@@ -1,0 +1,22 @@
+<select (change)="onChange($event)">
+  <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+</select>
+
+<div [ngSwitch]="selectedOption">
+  <img
+    *ngSwitchCase="'Fire'"
+    src="https://images.unsplash.com/photo-1618325508550-951512a1e82d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZmlyZXxlbnwwfHwwfHx8MA%3D%3D"
+    alt="Image 1"
+  />
+  <img
+    *ngSwitchCase="'Ice'"
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZvxtDjSe6u4aDqNwwCPfaztHSIHYrcHJrBfeOUcvxiA&s"
+    alt="Image 2"
+  />
+  <img
+    *ngSwitchCase="'Water'"
+    src="https://static6.depositphotos.com/1043073/665/i/450/depositphotos_6651515-stock-photo-water-splash.jpg"
+    alt="Image 3"
+  />
+  <div *ngSwitchDefault>Select an option</div>
+</div>

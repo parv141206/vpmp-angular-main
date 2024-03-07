@@ -1,0 +1,6 @@
+<input [(ngModel)]="searchTerm" placeholder="Search sports" (input)="searchSports()" />
+
+<div *ngFor="let sport of sports">
+ <h2>{{ sport.name }}</h2>
+ <p>{{ sport.content }}</p>
+</div>

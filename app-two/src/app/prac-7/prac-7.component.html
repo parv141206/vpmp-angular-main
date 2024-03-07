@@ -1,0 +1,11 @@
+<input [(ngModel)]="searchInput" placeholder="Search products">
+<button (click)="performSearch()">Search</button>
+
+<div *ngFor="let product of products | filter:searchTerm">
+ <!-- Display product details -->
+ <h2>{{product.name}}</h2>
+ <p>ID: {{product.id}}</p>
+ <p>Purchase Date: {{product.purchaseDate | date}}</p>
+ <p>Price: {{product.price }}</p>
+ <img [src]="product.image" alt="{{product.name}}">
+</div>
